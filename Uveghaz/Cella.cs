@@ -34,7 +34,7 @@ public class Cella
     public bool Telepit(NovenyFaj noveny, int mennyiseg)
     {
         bool sikeres = false;
-        if (mennyiseg > 0 && !Ures)
+        if (mennyiseg > 0 && Ures)
         {
             this.novenyFaj = noveny;
             this.egyedSzam = mennyiseg;
@@ -66,5 +66,14 @@ public class Cella
     {
         this.novenyFaj = null;
         this.egyedSzam = 0;
+    }
+
+    public override string ToString()
+    {
+        if (Ures)
+        {
+            return $"| {"üres", 8} |";
+        }
+        return $"| {this.novenyFaj.Azonosito, 3} {this.egyedSzam, 2}db |";
     }
 }

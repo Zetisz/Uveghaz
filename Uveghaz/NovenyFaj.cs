@@ -7,12 +7,12 @@ public class NovenyFaj
     private int egeszsegSzint; // 100 a max, 60 alatt beteg
     private int optimalisSuruseg;
     
-    public NovenyFaj(string nev,  int optimalisSuruseg, int nedvessegtartalom, int egeszsegSzint)
+    public NovenyFaj(string nev,  int optimalisSuruseg)
     {
         this.nev = nev;
         this.optimalisSuruseg = optimalisSuruseg;
-        this.nedvessegtartalom = nedvessegtartalom;
-        this.egeszsegSzint = egeszsegSzint;
+        this.nedvessegtartalom = 100;
+        this.egeszsegSzint = 100;
     }
     
     public string Nev { get => nev; set => nev = value; }
