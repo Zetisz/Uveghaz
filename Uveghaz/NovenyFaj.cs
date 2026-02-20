@@ -1,6 +1,6 @@
 namespace Uveghaz;
 
-internal class NovenyFaj
+public class NovenyFaj
 {
     private string nev;
     private int nedvessegtartalom; // 100 ideális
@@ -26,6 +26,16 @@ internal class NovenyFaj
         {
             return this.nev.Substring(0, 3);
         }
+    }
+
+    public override bool Equals(object? obj)
+    {
+        obj = obj as NovenyFaj;
+        if (this.nev == ((NovenyFaj)(obj)).nev)
+        {
+            return true;
+        }
+        return false;
     }
 
     public override string ToString()
